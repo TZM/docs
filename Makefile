@@ -97,4 +97,7 @@ release: html pdf
 	@echo "html doc is available ./zmgc-docs-html-$(GIT_VERSION).tgz and"
 	@echo "pdf doc is available ./zmgc-docs-pdf-$(GIT_VERSION).tgz"
 
-
+github:
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) ../docs-github/
+	@echo
+	@echo "Build finished. The HTML pages are in ../docs-github/."
