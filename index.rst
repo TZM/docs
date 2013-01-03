@@ -13,6 +13,7 @@ Projects
    :maxdepth: 1
 
    git/index
+   guide/index
 
 License
 =======

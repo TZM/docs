@@ -26,13 +26,13 @@ help:
 clean:
 	-rm -rf .build/*
 	-rm -f zmgc-docs-*.tgz
-	cd git && make clean
+	cd guide && make clean
 
 png-figures:
-	cd git && make png
+	cd guide && make png
 
 pdf-figures:
-	cd git && make pdf
+	cd guide && make pdf
 
 html: png-figures
 	mkdir -p .build/html .build/doctrees
