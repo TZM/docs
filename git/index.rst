@@ -2,11 +2,7 @@
 
 Introduction to ``git``
 #######################
-
 .. index:: git
-
-.. contents::
-
 .. highlight:: sh
 
 If you want to get more involved in the development of :mod:`itools`, or just
@@ -19,10 +15,10 @@ to send patches from time to time, there are two things you need to know:
 Every software project, even the smallest one, will benefit from a *Control
 Version System*, and ``git`` is probably the best.
 
+----
 
 Install ``git``
 ===============
-
 For the instructions that follow in this chapter to work properly, you will
 need a recent version of ``git``, 1.7 at least.
 
@@ -41,18 +37,17 @@ For Debian [#git-debian]_ or Ubuntu [#git-ubuntu]_ type::
 
 For FreeBSD [#git-freebsd]_, type::
 
-		$ cd /usr/ports/devel/git
-		$ sudo make all install clean
-		
+    cd /usr/ports/devel/git
+    $ sudo make all install clean
+
 For Mac OSX, using Homebrew [#git-osx]_, type::
 
-		$ brew install git
-		
+    $ brew install git
+
 For Windows, please use the [#git-windows]_.
 
 Configuration
 =============
-
 Once ``git`` is installed, you should configure it. The only thing required is
 to give your full name and your email address::
 
@@ -69,10 +64,8 @@ like this:
     email = norman@zmgc.net
     name = Norman Khine
 
-
 Configuration variables
 -----------------------
-
 There are, however, other configuration variables that most people would like
 to define. Like for example to use colors::
 
@@ -90,10 +83,8 @@ manual page::
 
     $ git config --help
 
-
 Environment variables
 ---------------------
-
 The user's name and email address should be defined in the configuration file.
 But sometimes it may be useful to override this information for a short period
 of time; that can be done with some environment variables::
@@ -102,12 +93,8 @@ of time; that can be done with some environment variables::
     $ export GIT_COMMITTER_NAME="Norman Khine"
     $ export GIT_AUTHOR_EMAIL="norman@zmgc.net"
 
-
 Check out :mod:`zmgc`
 =======================
-
-::
-
     $ cd ~/sandboxes/zeitgeist
     $ git clone git://github.com/nkhine/phoenix.git
     Initialized empty Git repository in /.../phoenix/.git/
@@ -134,10 +121,8 @@ option ``-r`` respectively::
 For now you only have one local branch called *master*, it is a branch of
 *origin/master*. Later we will see how to create new branches.
 
-
 How to keep your Branch up-to-date
 ==================================
-
 The most basic thing you will want to do is to keep your branch up-to-date.
 This is done through a two step process, where the first one is to fetch the
 origin branches::
@@ -158,7 +143,6 @@ branch::
 
         [xml] No more subclassing the Element class.
 
-
     commit 76698ec4bbea9f27447c2aee71c76af5a510efd9
     Author: Norman Khine <norman@zmgc.org>
     Date:   Wed Apr 4 19:26:13 2007 +0200
@@ -173,10 +157,8 @@ output will be empty). To synchronise with the trunk, use ``git rebase``::
     HEAD is now at f4b64a9... master
     Fast-forwarded master to origin.
 
-
 How to create new Branches
 ==========================
-
 Now imagine that you want to work not in the *master* branch, but in the
 latest stable branch, *0.60* in this example. To do so you will have to create
 a new local branch based on *0.60*, this is done with the command ``git
@@ -206,10 +188,8 @@ fetch`` and ``git rebase``::
     $ git checkout 0.60
     $ git rebase origin/0.60
 
-
 How to make a Commit
 ====================
-
 Now maybe you want to make some changes to :mod:`itools`. To use as an
 example, we are going to make some really useless changes::
 
@@ -294,20 +274,16 @@ And now we can commit::
 The call to ``git commit`` will open your favourite text editor so you can add
 a sensitive description for your commit.
 
-
 Other commands
 --------------
-
 We have seen the use of ``git add`` to add a new file or to tell that an
 existing file has been modified. There are other two commands you will need:
 
 * ``git rm`` To remove a file.
 * ``git mv`` To move or rename a file.
 
-
 How to send a Patch
 ===================
-
 To send your patches to be included in the main tree, the first step is always
 to synchronize::
 
@@ -339,12 +315,10 @@ There are two ways: to push to your *github* repository, or send by email.
 
 Github
 ------
-
 This is the preferred method to send patches and then send a pull request.
 
 Send by email
 -------------
-
 To send a patch by email use the ``git send-email`` command::
 
     $ git send-email --to git@zmgc.org \
@@ -353,10 +327,8 @@ To send a patch by email use the ``git send-email`` command::
 See the address to send the patches is the :mod:`itools` mailing list. You may
 also send the patch directly to me norman@zmgc.org.
 
-
 Summary of ``git`` commands
 ===========================
-
 See below a summary of the ``git`` commands seen in this chapter::
 
     git add
@@ -375,27 +347,16 @@ See below a summary of the ``git`` commands seen in this chapter::
     git send-email
     git status
 
-
 Help!
 -----
-
 For details about a command type::
-
     $ git <command> --help
 
-
 .. rubric:: Footnotes
-
 .. [#git-coding-style] Explained in another document, see :ref:`style`
-
 .. [#git-gentoo] http://www.gentoo.org
-
 .. [#git-debian] http://www.debian.org
-
 .. [#git-ubuntu] http://www.ubuntu.com
-
 .. [#git-freebsd] http://www.freebsd.org/cgi/cvsweb.cgi/ports/devel/git/
-
 .. [#git-osx] http://mxcl.github.com/homebrew/
-
 .. [#git-windows] http://windows.github.com/

@@ -1,12 +1,9 @@
-.. _zeitgeist_movement_defined:
+.. _guide:
 
 The Zeitgeist Movement Defined:
 ###############################
 
-.. index:: zeitgeist_movement_defined
-
-.. contents::
-
+.. index:: guide
 .. highlight:: sh
 
 Please note that this Guide is actively under development with only Part I of IV available. The other 3 sections/16 essays will be released as they are completed. If you find a Typo, please email media@thezeitgeistmovement.com
